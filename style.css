@@ -69,8 +69,29 @@ ul li{
     font-size: 17px;
     user-select: none;
     cursor: pointer;
-    
+    position: relative;
+    padding: 12px 8px 12px 50px;
 }
 ul li:hover{
     background-color: rgb(233, 233, 228);
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/checkbox-empty.svg);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+
+}
+
+ul li.checked::before{
+    background-image:url(images/checkbox-checked.svg);
 }
